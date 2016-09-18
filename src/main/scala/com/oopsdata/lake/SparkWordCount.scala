@@ -22,9 +22,9 @@ object SparkWordCount {
 //    // Create a sparse matrix ((9.0, 0.0), (0.0, 8.0), (0.0, 6.0))
 //    val sm: Matrix = Matrices.sparse(3, 2, Array(0, 1, 3), Array(0, 2, 1), Array(9, 6, 8))
 //    println(sm)
-    args.foreach(println)
-    val inputfile = args(2)
-    val outputfile = args(3)
+    args.foreach(println) // jar后面的是参数
+    val inputfile = args(0)
+    val outputfile = args(1)
     val conf: SparkConf = new SparkConf()
                 .setAppName("spark-learning")
                 .setMaster("local")
